@@ -43,7 +43,7 @@ export default function Profile() {
         <View style={{paddingTop:20,paddingBottom:20,borderWidth:2,borderColor:'grey'}}>
           <Text style={{ fontSize:20}}>
           <Entypo name="key" size={24} color="black" />
-                Change Password
+                Change Pass
           </Text>
         </View>
       </View>
