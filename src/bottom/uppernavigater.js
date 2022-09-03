@@ -19,7 +19,7 @@ export default function Search() {
           justifyContent: 'space-between',
           paddingLeft: 1
         }}>
-          <Pressable style={{ paddingRight: 50 }}>
+          <Pressable style={{ paddingRight: '5%' }}>
             <Ionicons name="arrow-back" size={30} color="white" />
           </Pressable >
           <Center>
@@ -28,8 +28,8 @@ export default function Search() {
             }} alt="Alternate Text" />
           </Center>
           <Text style={{ fontSize: 35, color: 'white', paddingTop: 20 }}>ShopAtOne</Text>
-          <Pressable ml={3}>
-            <Entypo name="shopping-cart" size={24} color="white" style={{ paddingLeft: 33 }} />
+          <Pressable >
+            <Entypo name="shopping-cart" size={24} color="white" style={{ paddingLeft: '10%' }} />
             <Box
               px={1}
               rounded="full"

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, Box, Image, Center, View, HStack, Icon, Pressable, Heading } from "native-base";
 import { MaterialCommunityIcons, Entypo, FontAwesome, Feather } from '@expo/vector-icons';
-import Colors from '../color'
+import Colors from '../../color'
 export default function Profile({navigation}) {
   const handleSubmit =(profilescreen)=>{
     navigation.navigate(profilescreen)
@@ -9,29 +9,6 @@ export default function Profile({navigation}) {
   return (
     <View>
       <View style={{ backgroundColor: 'white' }}>
-        <HStack
-          w='full'
-          px={2}
-          bg={Colors.orange}
-          py={6}
-          alignItems='center'
-        >
-          <View >
-            <View style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}>
-              <Center>
-                <Image size={50} borderRadius={100} source={{
-                  uri: "https://shopatone.com/logo.png"
-                }} alt="Alternate Text" />
-              </Center>
-              <Text style={{ fontSize: 35, color: 'white', paddingTop: 20 }}>ShopAtOne</Text>
-            </View>
-          </View >
-
-        </HStack >
         <View style={{ marginTop: 10, alignItems: 'center' }}>
           <FontAwesome name="user-circle-o" size={100} color="grey" />
         </View>
@@ -48,7 +25,7 @@ export default function Profile({navigation}) {
 
       <View
         w='full'
-        px={5}
+        px={0}
         bg={Colors.white}
         py={5}
         alignItems='center'
@@ -59,13 +36,13 @@ export default function Profile({navigation}) {
           justifyContent: 'center',
           paddingTop: 5
         }}>
-          <View style={{ flexDirection: 'row', alignItems: 'flex-start', paddingTop: '1%' }}>
+          <View style={{ flexDirection: 'row', alignItems: 'flex-start', paddingTop: 5 }}>
             <Entypo name="key" size={20} color="orange" />
             <Text style={{ fontSize: 20, color: 'black' }}> Change password</Text>
           </View>
 
           <Pressable ml={1} onPress={() => handleSubmit("Changepasswordpage")}>
-            <Feather name="arrow-right" size={24} color="orange" style={{ paddingLeft: '40%' }} />
+            <Feather name="arrow-right" size={24} color="orange" style={{ paddingLeft: 150 }} />
           </Pressable>
         </View>
         <View style={{
@@ -80,7 +57,7 @@ export default function Profile({navigation}) {
           </View>
 
           <Pressable ml={1}  onPress={() => handleSubmit("Addressbookpage")} >
-            <Feather name="arrow-right" size={24} color="orange" style={{ paddingLeft: '48%' }} />
+            <Feather name="arrow-right" size={24} color="orange" style={{ paddingLeft: 175 }} />
           </Pressable>
         </View>
         <View style={{

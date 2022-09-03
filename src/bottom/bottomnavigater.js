@@ -7,7 +7,16 @@ import Setting from '../screen/setting';
 const Tab = createBottomTabNavigator();
 const Bottomnavigater = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator tabBarOptions={{
+      activeTintColor: '#fff',
+      inactiveTintColor: 'lightgray',
+      activeBackgroundColor: 'white',
+      inactiveBackgroundColor: '#6409E4E3',
+          style: {
+                backgroundColor: 'purple',
+                paddingBottom: 3
+          }
+   }}>
       <Tab.Screen name=" " component={Home} options={{
         headerShown: false,
         tabBarIcon: () => <BottomIcons name="home" />
