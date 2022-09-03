@@ -4,8 +4,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Bottomnavigater from "./src/bottom/bottomnavigater";
 import {Beautyscreen, Fashionscreen, Mobilescreen, Groceryscreen, Electronicsscreen} from './src/productscreen/beautyscreen';
-
-
+import Changepassword from './src/screen/profile/changepassword';
+import Addressbook from './src/screen/profile/addressbook'
+import Profilepage from "./src/screen/profile/profile1";
 
 const Stack = createNativeStackNavigator();
 function App() {
@@ -19,6 +20,9 @@ function App() {
           <Stack.Screen name="GroceryPage" component={Groceryscreen} options={{ headerShown: false }} />
           <Stack.Screen name="ElectronicsPage" component={Electronicsscreen} options={{ headerShown: false }} />
           <Stack.Screen name="FashionPage" component={Fashionscreen} options={{ headerShown: false }} />
+          <Stack.Screen name="Changepasswordpage" component={Changepassword} options={{title: 'ShopAtOne Dev',}}/>
+          <Stack.Screen name="Addressbookpage" component={Addressbook} options={{title:'ShopAtOne Dev'}}/>
+          <Stack.Screen name="profilep" component={Profilepage} options={{ title:'ShopAtOne Dev'}}/>
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
