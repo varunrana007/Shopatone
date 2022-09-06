@@ -7,7 +7,8 @@ import NumericInput from "react-native-numeric-input"
 import Reviewpage from './reviewpage';
 import Offer from './offer';
 export default function Productpage({ route, navigation }) {
-  const [value, setValue] = useState(0);
+  const [quantity, setQuantity] = useState(1);
+  
   return (
     <>
       <CategoriesHeader />
@@ -19,7 +20,7 @@ export default function Productpage({ route, navigation }) {
                 route?.params?.sampleImage?.map((img, index) => {
                   console.log(img);
                   return (
-                    <Image source={{ uri: img }} alt="Alternate Text" w="80" h="80" resizeMode='contain' key={index} />
+                    <Image source={{ uri: img }} alt="Alternate Text" w="80" h="250" resizeMode='contain' key={index} />
                   )
                 })
               }
@@ -35,7 +36,7 @@ export default function Productpage({ route, navigation }) {
           <View mb={1} bg='white' pl={2} pr={2} flexDirection='row' justifyContent='space-between'>
             <Text fontSize={20}>₹{route?.params?.price}</Text>
             <NumericInput
-              value={value}
+              value={quantity}
               totalWidth={100}
               totalHeight={30}
               iconSize={20}
@@ -47,6 +48,7 @@ export default function Productpage({ route, navigation }) {
               iconStyle={{ color: Colors.white }}
               rightButtonBackgroundColor={Colors.orange}
               leftButtonBackgroundColor={Colors.orange}
+              onChange={setQuantity}
             />
           </View>
         </View>
