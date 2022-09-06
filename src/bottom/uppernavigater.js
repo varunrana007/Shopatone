@@ -6,42 +6,32 @@ import { Ionicons } from '@expo/vector-icons';
 export default function Search() {
   return (
     <HStack
-      w='full'
-      px={4}
-      bg={Colors.orange}
-      py={7}
-      alignItems='center'
+    w='full'
+    bg={Colors.orange}
+    py={6}
+    px={3}
+    pt={8}
+    flexDirection='column'
+    alignItems='center'
+    justifyContent='center'
     >
       <View >
-        <View style={{
+        <View w='96' style={{
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'space-between',
-          paddingLeft: 1
         }}>
-          <Pressable style={{ paddingRight: '5%' }}>
+          <Pressable>
             <Ionicons name="arrow-back" size={30} color="white" />
           </Pressable >
-          <Center>
+          <Center flexDirection='row'>
             <Image size={50} borderRadius={100} source={{
               uri: "https://shopatone.com/logo.png"
             }} alt="Alternate Text" />
-          </Center>
           <Text style={{ fontSize: 35, color: 'white', paddingTop: 20 }}>ShopAtOne</Text>
+          </Center>
           <Pressable >
-            <Entypo name="shopping-cart" size={24} color="white" style={{ paddingLeft: '10%' }} />
-            <Box
-              px={1}
-              rounded="full"
-              position="absolute"
-              top={-13}
-              bg={Colors.white}
-              _text={{
-                color: Colors.white,
-                fontSize: "11px"
-              }}
-            >
-            </Box>
+            <Entypo name="shopping-cart" size={24} color="white" />
           </Pressable>
         </View>
         <VStack  >

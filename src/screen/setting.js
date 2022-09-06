@@ -1,70 +1,17 @@
 import React from 'react'
 import { Text, Box, Image, Input, VStack, Center, View, HStack, Icon, Pressable, Button, ScrollView, Flex } from "native-base";
-import { MaterialIcons, Entypo, FontAwesome, EvilIcons } from '@expo/vector-icons';
 import Colors from '../color'
 import { Yourorder } from '../product/youroder';
 import { Keepshopping } from '../product/keepshopping';
+import AppHeader from '../component/header';
 export default function Setting({ navigation }) {
   const handleSubmit = (profiles) => {
     navigation.navigate(profiles)
   }
   return (
-    <View bgColor={Colors.grey}>
-      <HStack
-      w='full'
-      bg={Colors.orange}
-      py={6}
-      px={3}
-      pt={8}
-      flexDirection='column'
-      alignItems='center'
-      justifyContent='center'
-    >
-
-      <VStack w='full' style={{
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between'
-      }}>
-        <Center flexDirection='row'>
-          <Image size={50} borderRadius={100} source={{
-            uri: "https://shopatone.com/logo.png"
-          }} alt="Alternate Text" />
-          <Text style={{ fontSize: 35, color: 'white', paddingTop: 20 }}>ShopAtOne</Text>
-        </Center>
-
-        <Pressable>
-          <Entypo name="shopping-cart" size={24} color="white" />
-          <Box
-            px={1}
-            rounded="full"
-            position="absolute"
-            top={-13}
-            bg={Colors.white}
-            _text={{
-              color: Colors.white,
-              fontSize: "11px"
-            }}
-          >
-          </Box>
-        </Pressable>
-      </VStack>
-      <VStack  >
-        <Input
-          placeholder="Search Products"
-          width="100%"
-          borderRadius="2"
-          py="2"
-          _focus={{
-            backgroundColor: 'white',
-          }}
-          bg={Colors.white}
-          fontSize="12"
-          InputLeftElement={<Icon m="2" ml="3" size="5" color="black" as={<MaterialIcons name="search" />} />} InputRightElement={<Icon m="2" mr="3" size="5" color="black" as={<MaterialIcons name="mic" />} />} />
-      </VStack>
-
-    </HStack >
-      <ScrollView>
+    <>
+      <AppHeader/>
+      <ScrollView >
         <View>
           <View style={{
             flexDirection: 'row',
@@ -112,7 +59,7 @@ export default function Setting({ navigation }) {
               }}
             >
               {Yourorder.map((item) => (
-                <Pressable >
+                <Pressable pl={2}>
                   <Flex pt={3} style={{ paddingLeft: "1%" }}>
                     <Image source={item.image} key={item._id} />
                     <Text >{item.name}</Text>
@@ -135,7 +82,7 @@ export default function Setting({ navigation }) {
               }}
             >
               {Keepshopping.map((item) => (
-                <Pressable >
+                <Pressable pl={2}>
                   <Flex pt={3} style={{ paddingLeft: "1%" }}>
                     <Image source={item.image} key={item._id} />
                     <Text >{item.name}</Text>
@@ -146,18 +93,18 @@ export default function Setting({ navigation }) {
           </ScrollView>
         </View>
         <View my={1} bgColor={Colors.white} pt={2} pb={2}>
-          <View flexDirection='row' style={{ justifyContent: 'space-evenly' }} mb={3}>
-            <Button borderRadius="full" w={40} py={5} colorScheme="red" >
-              Your Order
-            </Button>
-            <Button borderRadius="full" w={40} py={5} colorScheme="yellow" >
-              Buy Again
+          <View alignItems='center'>
+            <Text pb={2} style={{fontSize:20}}>Your Wish List</Text>
+            <Text pb={4} style={{fontSize:12}}>You haven't created any lists.</Text>
+            <Button borderRadius="full" w='xs' py={2} colorScheme='warmGray' >
+              <Text color='white' fontSize={25}>Create a List</Text>
             </Button>
           </View>
-
         </View>
       </ScrollView>
-    </View>
+      
+    </>
+
   )
 }
 

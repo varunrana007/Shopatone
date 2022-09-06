@@ -1,10 +1,14 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-
-export default function cart() {
+import React from 'react';
+import { Text, Box, View, Flex, Pressable, Image, ScrollView, Heading, Value, Button } from "native-base";
+import AppHeader from '../component/header';
+import CategoriesHeader from '../component/CategoriesHeader';
+export default function Cartpage() {
   return (
     <View>
-      <Text>cart</Text>
+      <CategoriesHeader />
+      <Box bg="primary.400" p="12" rounded="lg">
+        Cart
+      </Box>
     </View>
   )
 }

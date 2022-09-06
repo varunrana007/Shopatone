@@ -4,9 +4,9 @@ import { Items } from './item';
 
 export default function Homebanner() {
   return (
-    <View >
-    <Image
-    source={require('../images/strip.png')}/>
+    <View pt={0.5}>
+      <Image
+        source={require('../images/strip.png')} />
     </View>
   )
 }

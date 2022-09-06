@@ -2,8 +2,8 @@ import React from 'react'
 import { Text, Box, Image, Center, View, HStack, Icon, Pressable, Heading } from "native-base";
 import { MaterialCommunityIcons, Entypo, FontAwesome, Feather } from '@expo/vector-icons';
 import Colors from '../color'
-export default function Profile({navigation}) {
-  const handleSubmit =(profilescreen)=>{
+export default function Profile({ navigation }) {
+  const handleSubmit = (profilescreen) => {
     navigation.navigate(profilescreen)
   }
   return (
@@ -11,9 +11,10 @@ export default function Profile({navigation}) {
       <View style={{ backgroundColor: 'white' }}>
         <HStack
           w='full'
-          px={2}
           bg={Colors.orange}
           py={6}
+          px={3}
+          pt={8}
           alignItems='center'
         >
           <View >
@@ -41,52 +42,39 @@ export default function Profile({navigation}) {
           <Text style={{ fontSize: 20, marginBottom: 20 }}>Mobile No : 9865327412</Text>
         </View>
       </View>
-      <View style={{ backgroundColor: 'white', marginTop: 5, paddingLeft: 15, paddingRight: 15 }}>
+      <View style={{ backgroundColor: 'white', marginTop: 5 ,alignItems:'center'}}>
         <Heading>Profile Setting</Heading>
       </View>
 
 
       <View
         w='full'
-        px={5}
         bg={Colors.white}
         py={5}
         alignItems='center'
+        // flexDirection='column'
+        justifyContent='center'
       >
-        <View style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'center',
-          paddingTop: 5
-        }}>
-          <View style={{ flexDirection: 'row', alignItems: 'flex-start', paddingTop: '1%' }}>
+        <View w='4/5' pb={5} flexDirection='row' justifyContent='space-between'>
+          <View flexDirection='row' >
             <Entypo name="key" size={20} color="orange" />
             <Text style={{ fontSize: 20, color: 'black' }}> Change password</Text>
           </View>
-
-          <Pressable ml={1} onPress={() => handleSubmit("Changepasswordpage")}>
-            <Feather name="arrow-right" size={24} color="orange" style={{ paddingLeft: '40%' }} />
-          </Pressable>
+            <Pressable  onPress={() => handleSubmit("Changepasswordpage")}>
+              <Feather name="arrow-right" size={24} color="orange"/>
+            </Pressable>
         </View>
-        <View style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'center',
-          paddingTop: 20
-        }}>
-          <View style={{ flexDirection: 'row', alignItems: 'flex-start', paddingTop: 5 }}>
+        <View w='4/5' pb={5} flexDirection='row' justifyContent='space-between'>
+          <View flexDirection='row'>
             <FontAwesome name="address-book" size={20} color="orange" />
             <Text style={{ fontSize: 20, color: 'black' }}> Address Book</Text>
           </View>
-
-          <Pressable ml={1}  onPress={() => handleSubmit("Addressbookpage")} >
-            <Feather name="arrow-right" size={24} color="orange" style={{ paddingLeft: '48%' }} />
-          </Pressable>
+            <Pressable onPress={() => handleSubmit("Addressbookpage")} >
+              <Feather name="arrow-right" size={24} color="orange" />
+            </Pressable>
         </View>
-        <View style={{
-          flexDirection: 'row',
-          paddingTop: 40
-        }}>
+      </View>
+        <View bg='white' pt={6} alignItems='center' pb={8}>
           <Pressable >
             <View style={{ flexDirection: 'row', alignItems: 'flex-start', paddingTop: 5 }}>
               <MaterialCommunityIcons name="logout" size={20} color="orange" />
@@ -94,7 +82,6 @@ export default function Profile({navigation}) {
             </View>
           </Pressable>
         </View>
-      </View>
     </View>
   )
 }

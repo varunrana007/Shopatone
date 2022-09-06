@@ -5,7 +5,6 @@ import { Items } from "./item";
 import { Latestproduct } from '../component/latestproduct'
 import { Sponsoredbanner } from '../component/Sponsoredbanner'
 import { useNavigation } from "@react-navigation/native";
-import UseCategoryNavigation from "./categoryNavigation";
 
 export default function Homeproduct() {
     const navigation = useNavigation();
@@ -32,11 +31,11 @@ export default function Homeproduct() {
                 style={{ marginTop: 5, backgroundColor: 'white' }}
             >
                 {Items.map((item) => (
-                    <Pressable onPress={() => handleNavigation(item.name)}>
+                    <Pressable onPress={() => handleNavigation(item.name)} key={item._id}>
                   
 
                         <Flex style={{ alignItems: 'center' }}>
-                            <Image source={item.image} key={item._id} />
+                            <Image source={item.image} />
                             <Text >{item.name}</Text>
                         </Flex>
                     </Pressable>
@@ -63,8 +62,8 @@ export default function Homeproduct() {
                 >
                     {Latestproduct.map((item) => (
                         <Pressable >
-                            <Flex style={{ paddingLeft: 15 }}>
-                                <Image source={item.image} key={item._id} />
+                            <Flex style={{ paddingLeft: 15 }} key={item._id}>
+                                <Image source={item.image}  />
                                 <Text >{item.name}</Text>
                             </Flex>
                         </Pressable>
@@ -84,7 +83,7 @@ export default function Homeproduct() {
                 flexDirection='row'
                 style={{ backgroundColor: 'white' }}>
 
-                <ScrollView horizontal={true}>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                     <View
                         style={{
                             flexDirection: 'row',
@@ -93,8 +92,8 @@ export default function Homeproduct() {
                         }}
                     >
                         {Sponsoredbanner.map((item) => (
-                            <Flex style={{ paddingLeft: 15 }}>
-                                <Image source={item.image} key={item._id} />
+                            <Flex style={{ paddingLeft: 15 }} key={item._id}>
+                                <Image source={item.image}  />
                                 <Text >{item.name}</Text>
                             </Flex>
                         ))}

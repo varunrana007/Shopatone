@@ -1,22 +1,31 @@
 import React from 'react';
-import { Text, Box, View, Flex, Pressable, Image, ScrollView, Heading, Value } from "native-base";
+import { Text, Box, View, Flex, Pressable, Image, ScrollView, Heading, Value, Button } from "native-base";
 import Colors from '../color';
-import Homesearch from '../component/homesearch';
 import { Beautyproduct } from '../product/beauty';
 import { Fashionproduct } from "../product/fashion";
-import {Electronicsproduct} from '../product/electronics';
-import {Groceryproduct} from '../product/grocery';
-import {Mobileproduct} from '../product/mobile';
+import { Electronicsproduct } from '../product/electronics';
+import { Groceryproduct } from '../product/grocery';
+import { Mobileproduct } from '../product/mobile';
 import Beautyrating from '../productscreen/beautyrating';
-import Search from '../bottom/uppernavigater'
+import CategoriesHeader from '../component/CategoriesHeader';
+import { useNavigation } from "@react-navigation/native";
 
 export function Beautyscreen() {
+    const navigation = useNavigation();
+    const handleBeautyItem = (item) => {
+        navigation.navigate("Productpage", item);
+    }
     return (
         <View flex={1}>
-            <Search />
+            <CategoriesHeader />
             <ScrollView showsVerticalScrollIndicator={false}>
-                <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
-
+                <View flexDirection='row' bg='white' justifyContent='space-between' pt={2}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
+                    <View flexDirection='row' w='40%' justifyContent='space-between' pr={2}>
+                        <Button w='16' colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
+                        <Button w='16' colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
+                    </View>
+                </View>
                 <Flex
                     flexWrap='wrap'
                     direction="row"
@@ -35,6 +44,7 @@ export function Beautyscreen() {
                             my={3}
                             pb={5}
                             overflow="hidden"
+                            onPress={() => handleBeautyItem(item)}
                         >
                             <Image
                                 source={{ uri: item.image }}
@@ -62,12 +72,21 @@ export function Beautyscreen() {
     )
 };
 export function Fashionscreen() {
+    const navigation = useNavigation();
+    const handleFashionItem = (item) => {
+        navigation.navigate("Productpage", item);
+    }
     return (
         <View flex={1}>
-            <Search />
+            <CategoriesHeader />
             <ScrollView showsVerticalScrollIndicator={false}>
-                <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
-
+                <View flexDirection='row' bg='white' justifyContent='space-between' pt={2}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
+                    <View flexDirection='row' w='40%' justifyContent='space-between' pr={2}>
+                        <Button w='16' colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
+                        <Button w='16' colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
+                    </View>
+                </View>
                 <Flex
                     flexWrap='wrap'
                     direction="row"
@@ -86,6 +105,7 @@ export function Fashionscreen() {
                             my={3}
                             pb={5}
                             overflow="hidden"
+                            onPress={() => handleFashionItem(item)}
                         >
                             <Image
                                 source={{ uri: item.image }}
@@ -105,7 +125,7 @@ export function Fashionscreen() {
                                 </Text>
                                 <Beautyrating value={item.rating} />
                             </Box>
-                        </Pressable>
+                        </Pressable >
                     ))}
                 </Flex>
             </ScrollView>
@@ -113,11 +133,21 @@ export function Fashionscreen() {
     )
 };
 export function Mobilescreen() {
+    const navigation = useNavigation();
+    const handleMobileItem = (item) => {
+        navigation.navigate("Productpage", item);
+    }
     return (
         <View flex={1}>
-            <Search />
+            <CategoriesHeader />
             <ScrollView showsVerticalScrollIndicator={false}>
-                <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
+                <View flexDirection='row' bg='white' justifyContent='space-between' pt={2}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
+                    <View flexDirection='row' w='40%' justifyContent='space-between' pr={2}>
+                        <Button w='16' colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
+                        <Button w='16' colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
+                    </View>
+                </View>
 
                 <Flex
                     flexWrap='wrap'
@@ -137,6 +167,7 @@ export function Mobilescreen() {
                             my={3}
                             pb={5}
                             overflow="hidden"
+                            onPress={() => handleMobileItem(item)}
                         >
                             <Image
                                 source={{ uri: item.image }}
@@ -164,11 +195,21 @@ export function Mobilescreen() {
     )
 };
 export function Groceryscreen() {
+    const navigation = useNavigation();
+    const handleGroceryItem = (item) => {
+        navigation.navigate("Productpage", item);
+    }
     return (
         <View flex={1}>
-            <Search />
+            <CategoriesHeader />
             <ScrollView showsVerticalScrollIndicator={false}>
-                <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
+                <View flexDirection='row' bg='white' justifyContent='space-between' pt={2}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
+                    <View flexDirection='row' w='40%' justifyContent='space-between' pr={2}>
+                        <Button w='16' colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
+                        <Button w='16' colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
+                    </View>
+                </View>
 
                 <Flex
                     flexWrap='wrap'
@@ -188,6 +229,7 @@ export function Groceryscreen() {
                             my={3}
                             pb={5}
                             overflow="hidden"
+                            onPress={() => handleGroceryItem(item)}
                         >
                             <Image
                                 source={{ uri: item.image }}
@@ -215,11 +257,21 @@ export function Groceryscreen() {
     )
 };
 export function Electronicsscreen() {
+    const navigation = useNavigation();
+    const handleElectronicsItem = (item) => {
+        navigation.navigate("Productpage", item);
+    }
     return (
         <View flex={1}>
-            <Search />
+            <CategoriesHeader />
             <ScrollView showsVerticalScrollIndicator={false}>
-                <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
+                <View flexDirection='row' bg='white' justifyContent='space-between' pt={2}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
+                    <View flexDirection='row' w='40%' justifyContent='space-between' pr={2}>
+                        <Button w='16' colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
+                        <Button w='16' colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
+                    </View>
+                </View>
 
                 <Flex
                     flexWrap='wrap'
@@ -239,6 +291,7 @@ export function Electronicsscreen() {
                             my={3}
                             pb={5}
                             overflow="hidden"
+                            onPress={() => handleElectronicsItem(item)}
                         >
                             <Image
                                 source={{ uri: item.image }}
