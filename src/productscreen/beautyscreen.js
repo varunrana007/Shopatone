@@ -22,8 +22,8 @@ export function Beautyscreen() {
                 <View flexDirection='row' bg='white' justifyContent='space-between' pt={2}>
                     <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
                     <View flexDirection='row' w='40%' justifyContent='space-between' pr={2}>
-                        <Button w='16' colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
-                        <Button w='16' colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
+                        <Button colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
+                        <Button colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
                     </View>
                 </View>
                 <Flex
@@ -83,8 +83,8 @@ export function Fashionscreen() {
                 <View flexDirection='row' bg='white' justifyContent='space-between' pt={2}>
                     <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
                     <View flexDirection='row' w='40%' justifyContent='space-between' pr={2}>
-                        <Button w='16' colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
-                        <Button w='16' colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
+                        <Button colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
+                        <Button colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
                     </View>
                 </View>
                 <Flex
@@ -144,8 +144,8 @@ export function Mobilescreen() {
                 <View flexDirection='row' bg='white' justifyContent='space-between' pt={2}>
                     <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
                     <View flexDirection='row' w='40%' justifyContent='space-between' pr={2}>
-                        <Button w='16' colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
-                        <Button w='16' colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
+                        <Button colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
+                        <Button colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
                     </View>
                 </View>
 
@@ -206,8 +206,8 @@ export function Groceryscreen() {
                 <View flexDirection='row' bg='white' justifyContent='space-between' pt={2}>
                     <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
                     <View flexDirection='row' w='40%' justifyContent='space-between' pr={2}>
-                        <Button w='16' colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
-                        <Button w='16' colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
+                        <Button colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
+                        <Button colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
                     </View>
                 </View>
 
@@ -268,8 +268,8 @@ export function Electronicsscreen() {
                 <View flexDirection='row' bg='white' justifyContent='space-between' pt={2}>
                     <Text style={{ fontWeight: 'bold', fontSize: 25, paddingTop: 10, paddingLeft: 17, }}>Result</Text>
                     <View flexDirection='row' w='40%' justifyContent='space-between' pr={2}>
-                        <Button w='16' colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
-                        <Button w='16' colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
+                        <Button colorScheme="orange"><Text fontSize={10}>Top Brands</Text></Button>
+                        <Button colorScheme="success"><Text fontSize={10}>Filter</Text></Button>
                     </View>
                 </View>
 

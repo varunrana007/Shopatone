@@ -1,19 +1,24 @@
 import React, { useState } from 'react'
-import { Input, View, Pressable, ScrollView, Image, Center, Box, Text, Heading } from "native-base";
+import { Input, View, Pressable, ScrollView, Image, Center, Box, Text, Heading, Button } from "native-base";
 import Colors from '../color';
 import CategoriesHeader from '../component/CategoriesHeader'
 import Beautyrating from '../productscreen/beautyrating';
 import NumericInput from "react-native-numeric-input"
 import Reviewpage from './reviewpage';
 import Offer from './offer';
-export default function Productpage({ route, navigation }) {
+import { useNavigation } from "@react-navigation/native";
+
+export default function Productpage({ route}) {
+  const navigation = useNavigation();
   const [quantity, setQuantity] = useState(1);
-  
+  const handleCart = () => {
+    navigation.navigate("Cartpage");
+  }
   return (
     <>
       <CategoriesHeader />
-      <ScrollView  >
-        <ScrollView horizontal={true} >
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <Center >
             <Box w='full' bg='white' flexDirection='row' px={5}>
               {
@@ -55,14 +60,19 @@ export default function Productpage({ route, navigation }) {
         <View>
           <Offer />
         </View>
-        <View bg='white'>
+        <View bg='white' px={4}>
           <Heading>Description</Heading>
-          <Text fontSize={20}>{route?.params?.description}</Text>
+          <Text fontSize={15}>{route?.params?.description}</Text>
         </View>
         <View>
           <Reviewpage />
         </View>
       </ScrollView>
+      <View flexDirection='row'>
+
+          <Button fontSize={15} borderWidth='0.1'borderRadius={2} bg='#E9DCE4' py={5} px={10} flexGrow={1}>Buy Now</Button>
+          <Button fontSize={15} borderWidth='0.1'borderRadius={2} bg='#D473D4' py={5} px={10} onPress={() => handleCart()} flexGrow={1}>Add Cart</Button>
+      </View>
     </>
   )
 }

@@ -5,7 +5,7 @@ import Beautyrating from '../productscreen/beautyrating';
 import Message from './message';
 export default function Reviewpage() {
   return (
-    <View bg='white' mt={2}>
+    <View bg='white' mt={2} px={4}>
       <Heading pb={4}>Ratings & Reviews</Heading>
       <View pb={2}>
         <Message
