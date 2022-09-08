@@ -8,7 +8,8 @@ export const Fashionproduct = [
     price: 400,
     rating:4,
     numReviews:4,
-    sampleImage:['https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/41Vc+9q0A8L.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/41LuO4UQ-jL.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/41V3AlHozJL.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/31QxOJIu55L.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51kE9Gn4wKL.jpg']
+    sampleImage:['https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/41Vc+9q0A8L.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/41LuO4UQ-jL.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/41V3AlHozJL.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/31QxOJIu55L.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51kE9Gn4wKL.jpg'],
+    size:['S','M','L','XL','Xll']
 },
 {
  _id : "2",
@@ -19,7 +20,8 @@ export const Fashionproduct = [
     price: 499,
     rating:3,
     numReviews:4,
-    sampleImage:["https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61e8EuWtIrL._UX679_.jpg",'https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/511VbZs3RjL._UX679_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71+09EvdXWL._UY741_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/615zamlWc3L._UY741_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61zUPZVjeaL._UY741_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61SjLYLupsL._UX679_.jpg']
+    sampleImage:["https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61e8EuWtIrL._UX679_.jpg",'https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/511VbZs3RjL._UX679_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71+09EvdXWL._UY741_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/615zamlWc3L._UY741_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61zUPZVjeaL._UY741_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61SjLYLupsL._UX679_.jpg'],
+    size:['S','M','L','XL','Xll']
 },
 {
     _id : "3",
@@ -30,7 +32,8 @@ export const Fashionproduct = [
     price: 349,
     rating:4,
     numReviews:2,
-    sampleImage:["https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61UspUGy48L._UX679_.jpg",'https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51RbnBO3EYL._UX679_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/515FHbwCoTL._UX679_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61XLXoKEQPL._UX679_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61JUWEKK3+L._UX679_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61SjLYLupsL._UX679_.jpg']
+    sampleImage:["https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61UspUGy48L._UX679_.jpg",'https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51RbnBO3EYL._UX679_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/515FHbwCoTL._UX679_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61XLXoKEQPL._UX679_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61JUWEKK3+L._UX679_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61SjLYLupsL._UX679_.jpg'],
+    size:['S','M','L','XL','Xll']
 },
 {
     _id : "4",
@@ -41,7 +44,8 @@ export const Fashionproduct = [
     price: 599,
     rating:5,
     numReviews:12,
-    sampleImage:["https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61op9+lbKmL._UY741_.jpg",'https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71a1Tr-QVAL._UY741_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51DiCuL9FkL._UY741_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61KGtt8dKdL._UY741_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61kW2lbQn-L._UY741_.jpg']
+    sampleImage:["https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61op9+lbKmL._UY741_.jpg",'https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71a1Tr-QVAL._UY741_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51DiCuL9FkL._UY741_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61KGtt8dKdL._UY741_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61kW2lbQn-L._UY741_.jpg'],
+    size:['S','M','L','XL','Xll']
 },
 {
     _id : "5",
@@ -52,7 +56,8 @@ export const Fashionproduct = [
     price: 399,
     rating:3.5,
     numReviews:2,
-    sampleImage:["https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61QCuZCsoXL._UY879_.jpg",'https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61etTwqUm9L._UL1440_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61veC+We0-L._UL1440_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/710XKoB6+eL._UL1440_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61etTwqUm9L._UL1440_.jpg']
+    sampleImage:["https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61QCuZCsoXL._UY879_.jpg",'https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61etTwqUm9L._UL1440_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61veC+We0-L._UL1440_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/710XKoB6+eL._UL1440_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61etTwqUm9L._UL1440_.jpg'],
+    size:['S','M','L','XL','Xll']
 },
 {
     _id : "6",
@@ -63,6 +68,7 @@ export const Fashionproduct = [
     price: 699,
     rating:4.5,
     numReviews:8,
-    sampleImage:["https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81tXynPAYTL._UX569_.jpg",'https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81dmTFLEfQL._UX569_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81dmTFLEfQL._UX569_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71IJ0BXdbJL._UX569_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71P6cX141bL._UY741_.jpg']
+    sampleImage:["https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81tXynPAYTL._UX569_.jpg",'https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81dmTFLEfQL._UX569_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81dmTFLEfQL._UX569_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71IJ0BXdbJL._UX569_.jpg','https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71P6cX141bL._UY741_.jpg'],
+    size:['S','M','L','XL','Xll']
 },
 ]

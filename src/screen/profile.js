@@ -2,9 +2,15 @@ import React from 'react'
 import { Text, Box, Image, Center, View, HStack, Icon, Pressable, Heading } from "native-base";
 import { MaterialCommunityIcons, Entypo, FontAwesome, Feather } from '@expo/vector-icons';
 import Colors from '../color'
-export default function Profile({ navigation }) {
-  const handleSubmit = (profilescreen) => {
-    navigation.navigate(profilescreen)
+import { useNavigation } from "@react-navigation/native";
+
+export default function Profile() {
+  const navigation = useNavigation();
+  const handlechangepassword = () => {
+    navigation.navigate('Changepasswordpage')
+  }
+  const handleAddress= () => {
+    navigation.navigate('Address')
   }
   return (
     <View>
@@ -60,7 +66,7 @@ export default function Profile({ navigation }) {
             <Entypo name="key" size={20} color="orange" />
             <Text style={{ fontSize: 20, color: 'black' }}> Change password</Text>
           </View>
-            <Pressable  onPress={() => handleSubmit("Changepasswordpage")}>
+            <Pressable  onPress={() => handlechangepassword()}>
               <Feather name="arrow-right" size={24} color="orange"/>
             </Pressable>
         </View>
@@ -69,7 +75,7 @@ export default function Profile({ navigation }) {
             <FontAwesome name="address-book" size={20} color="orange" />
             <Text style={{ fontSize: 20, color: 'black' }}> Address Book</Text>
           </View>
-            <Pressable onPress={() => handleSubmit("Addressbookpage")} >
+            <Pressable onPress={() => handleAddress()} >
               <Feather name="arrow-right" size={24} color="orange" />
             </Pressable>
         </View>

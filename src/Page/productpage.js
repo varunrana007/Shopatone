@@ -3,17 +3,17 @@ import { Input, View, Pressable, ScrollView, Image, Center, Box, Text, Heading, 
 import Colors from '../color';
 import CategoriesHeader from '../component/CategoriesHeader'
 import Beautyrating from '../productscreen/beautyrating';
-import NumericInput from "react-native-numeric-input"
+import NumericInput from "react-native-numeric-input";
 import Reviewpage from './reviewpage';
 import Offer from './offer';
 import { useNavigation } from "@react-navigation/native";
-
-export default function Productpage({ route}) {
+export default function Productpage({ route }) {
   const navigation = useNavigation();
   const [quantity, setQuantity] = useState(1);
-  const handleCart = () => {
-    navigation.navigate("Cartpage");
+  const handleCart = (item) => {
+    navigation.navigate("Cartpage" ,item);
   }
+  console.log(route)
   return (
     <>
       <CategoriesHeader />
@@ -21,9 +21,9 @@ export default function Productpage({ route}) {
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <Center >
             <Box w='full' bg='white' flexDirection='row' px={5}>
+
               {
                 route?.params?.sampleImage?.map((img, index) => {
-                  console.log(img);
                   return (
                     <Image source={{ uri: img }} alt="Alternate Text" w="80" h="250" resizeMode='contain' key={index} />
                   )
@@ -70,8 +70,8 @@ export default function Productpage({ route}) {
       </ScrollView>
       <View flexDirection='row'>
 
-          <Button fontSize={15} borderWidth='0.1'borderRadius={2} bg='#E9DCE4' py={5} px={10} flexGrow={1}>Buy Now</Button>
-          <Button fontSize={15} borderWidth='0.1'borderRadius={2} bg='#D473D4' py={5} px={10} onPress={() => handleCart()} flexGrow={1}>Add Cart</Button>
+        <Button fontSize={15} variant="outline" colorScheme='orange' py={5} px={10} flexGrow={1}>Buy Now</Button>
+        <Button fontSize={15} variant="outline" colorScheme='orange' py={5} px={10} onPress={() => handleCart(route?.params)} flexGrow={1}>Add Cart</Button>
       </View>
     </>
   )
